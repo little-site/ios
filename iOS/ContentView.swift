@@ -8,35 +8,39 @@
 
 import SwiftUI
 
-struct ContentView: View {
-    @State private var selection = 0
- 
-    var body: some View {
-        TabView(selection: $selection){
-            Text("First View")
-                .font(.title)
-                .tabItem {
-                    VStack {
-                        Image("first")
-                        Text("First")
-                    }
-                }
-                .tag(0)
-            Text("Second View")
-                .font(.title)
-                .tabItem {
-                    VStack {
-                        Image("second")
-                        Text("Second")
-                    }
-                }
-                .tag(1)
-        }
+struct ActivityIndicator: UIViewRepresentable {
+
+    @Binding var isAnimating: Bool
+    let style: UIActivityIndicatorView.Style
+
+    func makeUIView(context: UIViewRepresentableContext<ActivityIndicator>) -> UIActivityIndicatorView {
+        return UIActivityIndicatorView(style: style)
+    }
+
+    func updateUIView(_ uiView: UIActivityIndicatorView, context: UIViewRepresentableContext<ActivityIndicator>) {
+        isAnimating ? uiView.startAnimating() : uiView.stopAnimating()
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
+struct ContentView: View {
+    @EnvironmentObject var appStore: AppStore
+    @State private var showComposeModal = false
+ 
+    var body: some View {
+        VStack {
+            if self.appStore.state == .Loading {
+                ActivityIndicator(isAnimating: .constant(true), style: .large)
+            } else if self.appStore.state == .SignedOut {
+                SignInView()
+            } else if self.appStore.state == .SignedIn {
+                SettingsView()
+            }
+        }
+        .animation(.easeInOut(duration: 0.2))
+        .alert(isPresented: $appStore.didErrorWhileAuthenticating, content: {
+            Alert(title: Text("Error"),
+                  message: Text("There was an unexpected error while registering your authentication. Please try again in 5 minutes."),
+                  dismissButton: .default(Text("OK")) { self.appStore.didErrorWhileAuthenticating = false })
+        })
     }
 }

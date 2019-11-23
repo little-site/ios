@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		633266192381D6A9000B23BC /* ComposeLocationPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633266182381D6A9000B23BC /* ComposeLocationPicker.swift */; };
+		6332661B2381D6D1000B23BC /* ComposeTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6332661A2381D6D1000B23BC /* ComposeTextView.swift */; };
+		633266262381DE15000B23BC /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 633266252381DE15000B23BC /* CoreLocation.framework */; };
+		634E063723654D470044A667 /* Compose.swift in Sources */ = {isa = PBXBuildFile; fileRef = 634E063623654D470044A667 /* Compose.swift */; };
+		634E063923664A340044A667 /* SignIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 634E063823664A340044A667 /* SignIn.swift */; };
+		634E063B23664B230044A667 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 634E063A23664B230044A667 /* Settings.swift */; };
+		63519689232DA1080000DD72 /* AppStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63519688232DA1080000DD72 /* AppStore.swift */; };
+		639D54F6235350FB00D6F8C8 /* WebAPIDefs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639D54F5235350FB00D6F8C8 /* WebAPIDefs.swift */; };
+		63B677F22363FDFE0034E917 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B677F12363FDFE0034E917 /* Helpers.swift */; };
+		63DEE28923498BD30093EA74 /* WebAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DEE28823498BD30093EA74 /* WebAPI.swift */; };
 		63F00AF4232C0AC300EDCCB0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F00AF3232C0AC300EDCCB0 /* AppDelegate.swift */; };
 		63F00AF6232C0AC300EDCCB0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F00AF5232C0AC300EDCCB0 /* SceneDelegate.swift */; };
 		63F00AF8232C0AC300EDCCB0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F00AF7232C0AC300EDCCB0 /* ContentView.swift */; };
@@ -16,7 +26,18 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		63F00AF0232C0AC300EDCCB0 /* iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		633266182381D6A9000B23BC /* ComposeLocationPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComposeLocationPicker.swift; sourceTree = "<group>"; };
+		6332661A2381D6D1000B23BC /* ComposeTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComposeTextView.swift; sourceTree = "<group>"; };
+		633266252381DE15000B23BC /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		634E063623654D470044A667 /* Compose.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Compose.swift; sourceTree = "<group>"; };
+		634E063823664A340044A667 /* SignIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignIn.swift; sourceTree = "<group>"; };
+		634E063A23664B230044A667 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		63519688232DA1080000DD72 /* AppStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStore.swift; sourceTree = "<group>"; };
+		639D54F5235350FB00D6F8C8 /* WebAPIDefs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebAPIDefs.swift; sourceTree = "<group>"; };
+		63B677F12363FDFE0034E917 /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
+		63B8FBCE2340EB5500836EF0 /* iOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = iOS.entitlements; sourceTree = "<group>"; };
+		63DEE28823498BD30093EA74 /* WebAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebAPI.swift; sourceTree = "<group>"; };
+		63F00AF0232C0AC300EDCCB0 /* Little Site.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Little Site.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		63F00AF3232C0AC300EDCCB0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		63F00AF5232C0AC300EDCCB0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		63F00AF7232C0AC300EDCCB0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -31,24 +52,46 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				633266262381DE15000B23BC /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		63519687232D9EB80000DD72 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				634E063623654D470044A667 /* Compose.swift */,
+				633266182381D6A9000B23BC /* ComposeLocationPicker.swift */,
+				6332661A2381D6D1000B23BC /* ComposeTextView.swift */,
+				634E063823664A340044A667 /* SignIn.swift */,
+				634E063A23664B230044A667 /* Settings.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		636FEDCA235E91A80053766F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				633266252381DE15000B23BC /* CoreLocation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		63F00AE7232C0AC300EDCCB0 = {
 			isa = PBXGroup;
 			children = (
 				63F00AF2232C0AC300EDCCB0 /* iOS */,
 				63F00AF1232C0AC300EDCCB0 /* Products */,
+				636FEDCA235E91A80053766F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
 		63F00AF1232C0AC300EDCCB0 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				63F00AF0232C0AC300EDCCB0 /* iOS.app */,
+				63F00AF0232C0AC300EDCCB0 /* Little Site.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -56,13 +99,19 @@
 		63F00AF2232C0AC300EDCCB0 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
+				63B8FBCE2340EB5500836EF0 /* iOS.entitlements */,
+				63B677F12363FDFE0034E917 /* Helpers.swift */,
+				63519688232DA1080000DD72 /* AppStore.swift */,
 				63F00AF3232C0AC300EDCCB0 /* AppDelegate.swift */,
 				63F00AF5232C0AC300EDCCB0 /* SceneDelegate.swift */,
 				63F00AF7232C0AC300EDCCB0 /* ContentView.swift */,
+				63519687232D9EB80000DD72 /* Views */,
 				63F00AF9232C0AC500EDCCB0 /* Assets.xcassets */,
 				63F00AFE232C0AC500EDCCB0 /* LaunchScreen.storyboard */,
 				63F00B01232C0AC500EDCCB0 /* Info.plist */,
 				63F00AFB232C0AC500EDCCB0 /* Preview Content */,
+				639D54F5235350FB00D6F8C8 /* WebAPIDefs.swift */,
+				63DEE28823498BD30093EA74 /* WebAPI.swift */,
 			);
 			path = iOS;
 			sourceTree = "<group>";
@@ -92,7 +141,7 @@
 			);
 			name = iOS;
 			productName = iOS;
-			productReference = 63F00AF0232C0AC300EDCCB0 /* iOS.app */;
+			productReference = 63F00AF0232C0AC300EDCCB0 /* Little Site.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -146,9 +195,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63519689232DA1080000DD72 /* AppStore.swift in Sources */,
+				634E063923664A340044A667 /* SignIn.swift in Sources */,
+				63B677F22363FDFE0034E917 /* Helpers.swift in Sources */,
 				63F00AF4232C0AC300EDCCB0 /* AppDelegate.swift in Sources */,
 				63F00AF6232C0AC300EDCCB0 /* SceneDelegate.swift in Sources */,
+				633266192381D6A9000B23BC /* ComposeLocationPicker.swift in Sources */,
+				634E063B23664B230044A667 /* Settings.swift in Sources */,
 				63F00AF8232C0AC300EDCCB0 /* ContentView.swift in Sources */,
+				63DEE28923498BD30093EA74 /* WebAPI.swift in Sources */,
+				634E063723654D470044A667 /* Compose.swift in Sources */,
+				6332661B2381D6D1000B23BC /* ComposeTextView.swift in Sources */,
+				639D54F6235350FB00D6F8C8 /* WebAPIDefs.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,6 +342,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = iOS/iOS.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"iOS/Preview Content\"";
 				DEVELOPMENT_TEAM = QVX44SZ46V;
@@ -294,7 +353,8 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = site.little.iOS;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Little Site";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -304,6 +364,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = iOS/iOS.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"iOS/Preview Content\"";
 				DEVELOPMENT_TEAM = QVX44SZ46V;
@@ -314,7 +375,8 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = site.little.iOS;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Little Site";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
